@@ -23,56 +23,35 @@ print(alice_in_wonderland)
 # task 04
 black_sea = 436402
 azov_sea = 37800
-print(f"{black_sea + azov_sea} км²")
+print(f"Площа Чорного моря становить {black_sea} км², а площа Азовського моря становить {azov_sea} км². Яку площу займають Чорне та Азовське моря разом?")
 
 # task 05
 total = 375291
 first_second = 250449
 second_third = 222950
-
-third = total - first_second
-second = second_third - third
-first = first_second - second
-
-print(first)
-print(second)
-print(third)
+print(f"Мережа супермаркетів має 3 склади, де всього розміщено {total} товарів. На першому та другому складах перебуває {first_second} товарів. На другому та третьому – {second_third} товарів. Знайдіть кількість товарів на кожному складі.")
 
 # task 06
 months = 18
 payment = 1179
-print(f"{months * payment} грн")
+print(f"Сплачувати необхідно буде {months} місяців по {payment} грн/місяць. Обчисліть вартість комп'ютера.")
 
 # task 07
-print(f"a) {8019 % 8}")
-print(f"b) {9907 % 9}")
-print(f"c) {2789 % 5}")
-print(f"d) {7248 % 6}")
-print(f"e) {7128 % 5}")
-print(f"f) {19224 % 9}")
+a, b, c, d, e, f = 8019, 9907, 2789, 7248, 7128, 19224
+print(f"Знайди остачу від ділення чисел: a) {a}:8, b) {b}:9, c) {c}:5, d) {d}:6, e) {e}:5, f) {f}:9")
 
 # task 08
-pizza_large = 4 * 274
-pizza_medium = 2 * 218
-juice = 4 * 35
-cake = 1 * 350
-water = 3 * 21
-total_birthday = pizza_large + pizza_medium + juice + cake + water
-print(f"{total_birthday} грн")
+pizza_large, pizza_medium = 274, 218
+juice, cake, water = 35, 350, 21
+print(f"Піца велика - {pizza_large} грн, піца середня - {pizza_medium} грн, сік - {juice} грн, торт - {cake} грн, вода - {water} грн. Скільки грошей знадобиться?")
 
 # task 09
 photos = 232
 per_page = 8
-pages = photos // per_page
-if photos % per_page > 0:
-    pages += 1
-print(f"{pages}")
+print(f"Ігор має {photos} фотографій. На одній сторінці може бути {per_page} фото. Скільки сторінок знадобиться?")
 
 # task 10
 distance = 1600
 fuel_per_100 = 9
 tank = 48
-total_fuel = distance / 100 * fuel_per_100
-stops = (total_fuel / tank)
-print(f"Потрібно {total_fuel} літрів")
-print(f"Зупинок: {stops}")
+print(f"Відстань між містами становить {distance} км. На кожні 100 км необхідно {fuel_per_100} літрів бензину. Місткість баку становить {tank} літрів. Скільки літрів знадобиться і скільки разів треба заїхати на заправку?")
