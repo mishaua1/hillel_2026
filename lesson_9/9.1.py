@@ -1,16 +1,19 @@
-class Ромб:
-    def __init__(self, сторона_а, кут_а):
-        self.сторона_а = сторона_а
-        self.кут_а = кут_а
+class Rhombus:
+    def __init__(self, side_a, angle_a):
+        self.side_a = side_a
+        self.angle_a = angle_a
 
     def __setattr__(self, name, value):
-        if name == "сторона_а":
+        if name == "side_a":
             if value <= 0:
-                raise ValueError("Сторона повинна бути більше 0")
+                raise ValueError("Side must be greater than 0")
 
-        elif name == "кут_а":
+        elif name == "angle_a":
             object.__setattr__(self, name, value)
-            object.__setattr__(self, "кут_б", 180 - value)
+            object.__setattr__(self, "angle_b", 180 - value)
             return
+
+        elif name == "angle_b":
+            raise AttributeError("angle_b cannot be set directly!")
 
         object.__setattr__(self, name, value)
