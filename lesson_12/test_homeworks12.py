@@ -22,6 +22,10 @@ class TestSumEven(unittest.TestCase):
         result = sum_even([])
         self.assertEqual(result, 0)
 
+    def test_invalid_input(self):
+        with self.assertRaises(TypeError):
+            sum_even("не список")
+
 
 class TestFilterStrings(unittest.TestCase):
 
@@ -37,6 +41,10 @@ class TestFilterStrings(unittest.TestCase):
         result = filter_strings([])
         self.assertEqual(result, [])
 
+    def test_invalid_input(self):
+        with self.assertRaises(TypeError):
+            filter_strings(123)
+
 class TestContainsH(unittest.TestCase):
 
     def test_lowercase_h(self):
@@ -51,6 +59,10 @@ class TestContainsH(unittest.TestCase):
         result = contains_h("world")
         self.assertFalse(result)
 
+    def test_invalid_input(self):
+        with self.assertRaises(TypeError):
+            contains_h(123)
+
 class TestСheck_Аge(unittest.TestCase):
 
     def test_age_passes(self):
@@ -62,6 +74,10 @@ class TestСheck_Аge(unittest.TestCase):
         lst = [('Alice', 'Smith', 25)]
         result = check_age(lst, [0], 30)
         self.assertFalse(result)
+
+    def test_invalid_input(self):
+        with self.assertRaises(TypeError):
+            check_age("не список", [0], 30)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
