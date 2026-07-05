@@ -25,7 +25,7 @@ pipeline {
                 sh '''
                     cd homework_31
                     . venv/bin/activate
-                    pytest test_db.py -v --alluredir=allure-results
+                    DB_PORT=5432 pytest test_db.py -v --alluredir=allure-results
                 '''
             }
         }
