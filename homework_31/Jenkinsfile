@@ -39,6 +39,9 @@ pipeline {
     post {
         always {
             allure includeProperties: false, results: [[path: 'homework_31/allure-results']]
+            mail to: 'm.stakhiv11@gmail.com',
+                 subject: "Jenkins: ${currentBuild.fullDisplayName} - ${currentBuild.currentResult}",
+                 body: "Пайплайн завершився зі статусом: ${currentBuild.currentResult}\nДеталі: ${env.BUILD_URL}"
         }
     }
 }
